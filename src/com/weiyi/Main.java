@@ -2,6 +2,37 @@ package com.weiyi;
 
 import javax.xml.crypto.Data;
 
+/**dog
+ * @author Bruce Eckel
+ * @author www.MindView.net
+ * @version 4.0
+ */
+class AllTheColorsOfTheRainbow{
+    int anIntegerRepresentingColors;
+
+    void setAnIntegerRepresentingColors(int setint){
+        this.anIntegerRepresentingColors = setint;
+    }
+    void changeTheHueOfTheColor(){
+        switch (anIntegerRepresentingColors){
+            case 1 : System.out.println("red");
+                break;
+            case 2 : System.out.println("orange");
+                break;
+            case 3 : System.out.println("yellow");
+                break;
+            case 4 : System.out.println("green");
+                break;
+            case 5 : System.out.println("blue");
+                break;
+            case 6 : System.out.println("indigo");
+                break;
+            case 7 : System.out.println("purple");
+                break;
+        }
+    }
+}
+
 public class Main {
     static int j = 4;
     static class DataOnly{
@@ -33,12 +64,15 @@ public class Main {
         static void increment(){
             Main.j++;
         };
+
+
     }
 
     static int a;
     static char b;
     public static void main(String[] args) {
         String s="age";
+        int h=1;
         System.out.println(a);
         System.out.println(b);
         System.out.println("Hello,world");
@@ -54,5 +88,14 @@ public class Main {
         dataonly.increment();
 
         System.out.println(j);
+
+        System.out.println(args[0] + args[1] + args[2]);
+
+        AllTheColorsOfTheRainbow all = new AllTheColorsOfTheRainbow();
+
+        all.setAnIntegerRepresentingColors(h);
+
+        all.changeTheHueOfTheColor();
+
     }
 }
