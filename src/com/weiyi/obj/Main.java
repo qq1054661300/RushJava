@@ -1,6 +1,4 @@
-package com.weiyi;
-
-import javax.xml.crypto.Data;
+package com.weiyi.obj;
 
 /**dog
  * @author Bruce Eckel
