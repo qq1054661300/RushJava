@@ -1,0 +1,53 @@
+swagger
+@Api（tags= “接口说明”）  接口功能描述  //类
+
+@ApiModel(value = "value = "com.~~~",description = "新增用户参数")   实体类中参数接受说明  //类
+
+@ApiModelProperty(value = "属性")  对model属性的说明  //用于字段
+
+@ApiParam(value = "新用户参数" required = true //是否必须填写)  Controller中方法参数说明  //Controller方法中
+
+@ApiOperation(value = "接口名称",notes = "详细说明")  说明方法的作用，每个接口的定义。  //Controller方法上
+
+@ApiResponse(code = 200, message = "OK", response = UserDto.class)  说明接口响应的一些信息  //方法上
+
+@ApiResponses({@ApiResponse}) 用于组装多个@ApiResponse   //方法上
+
+@ApilmplicitParam(name = "id 参数名，定义方法中单独的参数名称", value = "用户id 参数的中文说明", 
+dataType = "string 参数的数据类型", paramType = "query 参数类型", required = true, defaultValue = "1 默认值")  //方法上
+
+@Operation（summary = "元件可换"）对操作进行简要说明  https://docs.swagger.io/swagger-core/v2.0.0-RC3/apidocs/io/swagger/v3/oas/annotations/Operation.html
+
+
+Spring
+
+@RestController = @Controller + @ResponseBody   将函数的返回值直 接填入 HTTP 响应体中
+
+@Controller 将当前注释的类注入IOC容器（反转控制），当程序运行类直接被实例化
+
+@ResponseBody 类中所有的API接口返回的数据都以JSON返回
+
+@Autowired 自动配置方法，消除代码里的getter/setter与bean属性中的property
+
+@GetMapping(value = "") 用于向服务器请求数据
+
+@PostMapping(value = "") 在服务器上创建一个新资源
+
+@Parameter(description = "id" , required = true) 读取.xml中的参数
+
+@RequestBody 用于接收前端传递给后端的json字符串
+
+@Validated 用于检验数据
+
+@Scope("") 用于标识bean的作用域，默认是单例
+
+@Bean 用于告诉方法产生一个bean对象，只调用一次之后放入Spring IOC 中	
+
+@Value("#{configProperties['key']}")  用于简化读取propertise中的配置值
+
+@Transactional 注解代码运行出错时能够回滚
+
+@Override 用于重写
+
+
+

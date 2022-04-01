@@ -1,0 +1,20 @@
+Token
+服务器生成一段加密字符串、用户使用这个字符串”令牌“进行登录
+当用户第一次账号登录时服务器生成Token和Token失效的时间发送给客户端
+在Token失效前客户端只用发送Token给服务器请求数据即可，无需再次登录
+steam令牌+记住账户
+qq登录
+
+Token具有随机性、不可预测性、时效性、无状态、跨域的特点
+Token完全由应用管理有效避开同源策略（协议、域名、端口相同 url同源）//同源的端口可以互相访问资源和操作DOM
+Token可以避免CSRF攻击（跨站点请求伪造，使用用户信息进行各类操作）
+Token可以在多个服务间共享
+Token可以作为一个永久的令牌
+
+Session是服务器用于保存用户状态创建的对象
+HttpSession s = request.getSession(boolean flag); 
+当flag为true时：先查看请求当中是否有sessionId,如果没有，则创建一个session对象。如果有，则依据sessionId
+查找对应的session对象，如果找到了，则返回该对象，如果找不到，创建一个新的session对象。
+
+当flag为false时: 先查找请求当中是否有sessionId，如果没有，返回null。如果有，则依据sessionId查找对应的session
+对象，如果找到了，则返回该对象，如果找不到，返回null。

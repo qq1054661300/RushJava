@@ -72,5 +72,9 @@ public class type {
         f2 += 4;
         System.out.println(Long.toBinaryString(f1));
         System.out.println(Long.toBinaryString(f2));
+
+        String h = "123",j = "1".concat("23");
+        System.out.println(h == j);
+        System.out.println(h.equals(j));
     }
 }
