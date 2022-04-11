@@ -49,5 +49,6 @@ Spring
 
 @Override 用于重写
 
+@EnableAspectJAutoProxy(proxyTargetClass = true)  \\用于开启SpringAOP
 
-
+@Configuration  //指示一个类声明一个或多个bean
