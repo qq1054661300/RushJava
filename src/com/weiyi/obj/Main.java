@@ -5,6 +5,10 @@ package com.weiyi.obj;
  * @author www.MindView.net
  * @version 4.0
  */
+import com.weiyi.type.Print;
+
+import static com.weiyi.type.Print.print;
+
 class AllTheColorsOfTheRainbow{
     int anIntegerRepresentingColors;
 
@@ -94,6 +98,12 @@ public class Main {
         all.setAnIntegerRepresentingColors(h);
 
         all.changeTheHueOfTheColor();
+
+        if (true){
+            print("1");
+        }else {
+            print("2");
+        }
 
     }
 }
