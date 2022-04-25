@@ -18,6 +18,8 @@ dataType = "string 参数的数据类型", paramType = "query 参数类型", req
 
 @Operation（summary = "元件可换"）对操作进行简要说明  https://docs.swagger.io/swagger-core/v2.0.0-RC3/apidocs/io/swagger/v3/oas/annotations/Operation.html
 
+@PreAuthorize("hasAnyRole('admin','super_admin')")  //权限控制
+
 
 Spring
 

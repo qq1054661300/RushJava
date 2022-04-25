@@ -36,3 +36,5 @@ exceptionHandling() //用于统一处理Spring Security的异常
 authenticationEntryPoint（） //当用户处理请求出现异常时，用来开启特定的认证流程
 accessDeniedHandler（） //通过修改实现类来处理Ajax请求
 addFilterBefore(new JwtAuthenticationFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class) //JWT拦截的过滤器的结尾
+
+BeanUtils.copyProperties("1","2")  //将1转换为2

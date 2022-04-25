@@ -43,3 +43,41 @@ TIMESTAMP	java.sql.Timestamp
 
 1.7 解释物理数据独立性的概念，以及它在数据库系统中的重要性
 将数据存储的硬件单独的存放在一个只有内部网络或特定的电脑能够访问的环境中，这样能够让数据更加的安全让别人无法访问
+
+create table r
+(A D,
+ A1 D1,
+ A2 D2,
+  。。。。
+ <完整性约束>);
+create table r 创建一张表r
+D是A得域声明
+primary key A 定义A为表的主键
+foreign key A references s A的值必须对应s中主键的值
+
+insert into i value （1）向i表中插入1
+
+delete from student 删除表student
+drop table r 删除关于r的所有信息（包括关联等）
+alter table r add A D 向r表中添加A、D两个属性
+alter table r drop A 将r表中的A属性删除
+
+select name from i 搜索并返回i表中的name属性
+select distinct name from i 用于去除重复数据
+select id * 2 from i 返回了i表中所有id乘2以后的值
+select name from i where name = "1" 返回i表中所有name = 1 的值
+select id from i where name > "1" 返回i表中所有id > 1 的值
+
+select name , id 
+from n natural join i 自然连接（natural join）只考虑n和i表中数值（相同）进行连接
+
+where name like '%wi%'; 匹配含有wi字符串的值（%），（_）匹配任意一个字符
+
+where id between 1 and 9 返回id在1-9之间的数据 not between 反之
+
+聚集函数 
+平均值（avg）
+最小值（min）
+最大值（max）
+总和（sum）
+计数（count）select avg(id) from i 表i中所有id的平均值	
